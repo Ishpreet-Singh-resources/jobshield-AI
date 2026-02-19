@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JobShield</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 15px;
+            background-color: #f4f6f8;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1a73e8;
+        }
+
+        .score {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .risk {
+            padding: 8px;
+            border-radius: 6px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .reasons {
+            font-size: 14px;
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 6px;
+            background-color: #1a73e8;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1558b0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🛡️ JobShield</h2>
+
+    <div class="score">
+        Risk Score: <span id="riskScore">--</span>%
+    </div>
+
+    <div id="riskLevel" class="risk">
+        Checking email...
+    </div>
+
+    <div class="reasons">
+        <strong>Detected Signals:</strong>
+        <ul id="reasonsList">
+        </ul>
+    </div>
+
+    <button id="scanBtn">Rescan Email</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
